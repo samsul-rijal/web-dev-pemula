@@ -1,4 +1,40 @@
-nav {
-    background-color: brown;   
-    color: burlywood;
+.content-fb {
+    background-color: brown;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    background-color: aqua;
+    width: 60%;
+}
+
+.right {
+    background-color: blueviolet;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input input {
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.form-input button {
+    width: 510px;
+    height: 60px;
+    margin-bottom: 10px;
+    background-color: blue;
+    color: white;
 }

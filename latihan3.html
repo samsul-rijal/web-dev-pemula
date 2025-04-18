@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .box {
+            background-color: brown;
+            display: flex;
+            gap: 10px;
+            /* height: 100vh; */
+            justify-content: center;
+            align-items: end;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: cadetblue;
+            height: 50px;
+        }
+        
+        .menu-right {
+            display: flex;
+            gap: 20px;
+        }
+
+
+        .content {
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            border-radius: 10px;
+            margin: 20px;
+            gap: 10px;
+        }
+
+
+        .box-image {
+            background-color: burlywood;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .box-image img {
+            width: 100%;
+        }
+
+        .box-satudua{
+            /* background-color: aqua; */
+
+        }
+
+        .satu {
+            background-color: blue;
+            margin-bottom: 10px;
+            /* width: 250px; */
+            /* height: 50px; */
+            border-radius: 10px;
+            padding: 20px 150px;
+        }
+
+        .dua {
+            background-color: cadetblue;
+            /* width: 250px; */
+            /* height: 50px; */
+            border-radius: 10px;
+            padding: 20px 150px;
+
+        }
+
+
+
+        input {
+            padding: 6px;
+            border-radius: 8px;
+            background-color: rgb(246, 244, 244);
+        }
+
+        button {
+            background-color: cadetblue;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box">
+        <div style="background-color: aqua;">BOX 1</div>
+        <div style="background-color: blueviolet;">BOX 2</div>
+        <div style="background-color: cadetblue;">BOX 3</div>
+
+    </div>
+
+    <div class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="menu-right">
+            <div style="background-color: red;">ICON SEARCH</div>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <div class="box-satudua">
+            <div class="satu">SATU</div>
+            <div class="dua">DUA</div>
+        </div>
+        <div class="box-image">
+            <img src="https://images.tokopedia.net/img/cache/200-square/VqbcmM/2024/8/15/e426b597-a171-4d23-9a93-87913ec825bf.png" alt="">
+        </div>
+        
+
+    </div>
+    
+
+    <div style="margin: 10px;">
+        <input type="text" placeholder="masukan email">
+        <button>Login</button>
+    </div>
+
+
+    <div class="content-fb">
+
+        <div class="left">
+            <div>
+                <img width="650px" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
+            </div>
+            <p style="margin-left: 60px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus dicta dolore voluptate repellendus, quasi unde qui dolores quidem explicabo cumque vero, reprehenderit amet nulla maiores molestiae? Voluptatem, totam ullam.</p>
+        </div>
+        <div class="right">
+            <div class="form-input">
+                <div>
+                    <input type="text">
+                </div>
+                <div>
+                    <input type="text">
+                </div>
+                <div>
+                    <button>Login</button>
+                </div>
+                <div class="link-forgot">
+                    <a href="">Forgotten password?</a>
+                </div>
+                <hr style="background-color: blue; width: 100%; margin: 10px 0">
+                <div>
+                    <button>Create acoount</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
