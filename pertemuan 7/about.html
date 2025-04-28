@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- scroll carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.css" />
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            My App
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 style="text-align: center; margin-bottom: 10px;">My Skill</h2>
+        <div class="icon">
+            <div>
+                <i class="fa-brands fa-html5" style="color: red;"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-css3-alt" style="color: blue;"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-bootstrap" style="color: blue;"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-js" style="color: orange;"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-github" style="color: black;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- scroll carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.js"></script>
+    <script>
+        new ScrollCarousel(".icon", {
+            autoplay: true,
+            speed: 30,
+            smartSpeed: true,
+        });
+    </script>
+</body>
+</html>
