@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background-color: red;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #eceaea;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 6vh;
+    align-items: center;
+}
+
+.navbar .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-content {
+    display: flex;
+}
+
+.main-content .sidebar {
+    width: 250px;
+    background-color: #271b32;
+    color: white;
+    padding: 20px;
+}
+
+.menu-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-sidebar a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-content .content {
+    flex: 1;
+    background-color: #e0dfdf;
+    height: 97vh;
+    overflow-y: scroll;
+    padding: 0 20px;
+}

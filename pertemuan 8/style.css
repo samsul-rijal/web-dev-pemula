@@ -1,0 +1,60 @@
+:root {
+    --primary: #ff441e;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 42px;
+}
+
+.content {
+    padding-top: 40px;
+}
+
+.navbar {
+    background-color: #eceaea;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 40px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.home-section {
+    background-color: #ede9e9;
+    height: 400px;
+}
+
+
+.about-section {
+    background-color: #d7d6d3;
+    height: 350px;
+}
+
+
+.contact-section {
+    background-color: #ede9e9;
+    height: 750px;
+}
+
+.footer {
+    height: 400px;
+}
