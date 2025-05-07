@@ -1,0 +1,9 @@
+<!-- PHP -->
+<!-- MVC -> model - view - controller -->
+<!-- template engine -> html, blade -->
+
+<!-- JAVASCRIPT -->
+<!-- Frontend -> REACT JS, VUE JS, ANGULAR JS -->
+<!-- Backend -> Express JS, Nest JS -> tanpa perlu paham html css --> 
+<!-- Mobile -> React Native -->
+<!-- Desktop -> Electron -->
