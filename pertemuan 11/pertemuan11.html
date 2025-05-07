@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #user-list{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #data-user {
+            width: 300px;
+            box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="user-list">
+        <div id="data-user">
+            <h2>Nama User</h2>
+            <p>Alamat</p>
+            <p>Umur</p>
+        </div>
+    </div>
+
+    <script>
+        // let nama1 = "asep"
+        // let nama2 = "budi"
+        // array
+        let number = [1,2,3,4,5,6,7,8,9]
+        console.log(number);
+        
+        let names = ["Asep", "Budi", "Jono", "Joyo"]
+        console.log(names);
+        console.log(names[0]);
+        console.log(names[3]);
+
+        // object
+        // let nama = "Asep"
+        // let alamat = "Tangerang"
+        // let umur = 30
+
+        let person = {
+            nama : "Asep",
+            alamat : "Tangerang",
+            umur : 30,
+        }
+        let person2 = {
+            nama : "Budi",
+            alamat : "Bandung",
+            umur : 30,
+        }
+
+        console.log(person);
+        
+
+
+        // array of object
+        let users = [
+            {
+                nama : "Asep",
+                alamat : "Tangerang",
+                umur : 30,   
+            },
+            {
+                nama : "Budi",
+                alamat : "Bandung",
+                umur : 30,   
+            },
+            {
+                nama : "Samsul",
+                alamat : "Bogor",
+                umur : 30,   
+            },
+            {
+                nama : "Joyo",
+                alamat : "Bogor",
+                umur : 30,   
+            },
+        ]
+
+        console.log(users);
+        
+        // for(let index = 0; index < users.length; index++){
+        //     console.log(users[index]);
+        // }
+
+        document.getElementById("user-list").innerHTML = ''
+        for(let item of users){
+            // console.log(item);
+            document.getElementById("user-list").innerHTML +=
+            `
+            <div id="data-user">
+                <h2>${item.nama}</h2>
+                <p>${item.alamat}</p>
+                <p>${item.umur}</p>
+            </div>
+
+            `
+        }
+
+    </script>
+    
+</body>
+</html>
