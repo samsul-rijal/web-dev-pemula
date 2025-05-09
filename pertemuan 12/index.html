@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #list-surat{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #surat {
+            width: 300px;
+            box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="list-surat">
+        <div id="surat">
+            <!-- <h3>Alfatihah</h3> -->
+             <a href="detail-surat.html">Title</a>
+            <p>Arti</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        // document.getElementById("list-surat").innerHTML = 
+        // `
+        //     <div id="surat">
+        //         <h3>Al Nasr</h3>
+        //         <p>Arti</p>
+        //     </div>
+
+        // `
+
+
+        // async
+        async function getSurat(){
+
+        // const response = await fetch('https://equran.id/api/v2/surat').then(res => res.json())
+            const response = await fetch('https://equran.id/api/v2/surat')
+            const surat = await response.json()
+            // console.log(surat.data);
+
+            document.getElementById("list-surat").innerHTML = ''
+            for(let item of surat.data){
+                // console.log(item);
+                
+                document.getElementById("list-surat").innerHTML += 
+                `
+                    <div id="surat">
+                        <a href="detail-surat.html">${item.nama}</a>
+                        <p>${item.namaLatin}</p>
+                    </div>
+                
+                `
+            }
+
+        }
+
+        getSurat()
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list-movie{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #movie {
+            width: 300px;
+            box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="list-movie">
+        <div id="movie">
+            <!-- <h3>Alfatihah</h3> -->
+             <img src="" alt="">
+             <a href="#">Title</a>
+            <p>Arti</p>
+        </div>
+    </div>
+    
+
+
+    <script>
+
+        const url = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
+        const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNTFiNmU4ZmViMDUzYTdiMzhjZmRmMmQxY2E3NmYzYSIsIm5iZiI6MS42NTY5Mzk3ODg5MzUwMDAyZSs5LCJzdWIiOiI2MmMyZTUwYzZhMzAwYjAwNGM1NTNmMDQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.R2piJVgyRsr1mG3_88kDbxOO0rDwjmbvlhHtuh-Mq08'
+        }
+        };
+
+
+        const pathImage = "https://image.tmdb.org/t/p/w500"
+        async function getMovie(){
+            const response = await fetch(url, options)
+            const movies = await response.json()
+
+            console.log(movies.results);
+
+            document.getElementById("list-movie").innerHTML = ''
+            for(let item of movies.results){
+                // console.log(item);
+                
+                document.getElementById("list-movie").innerHTML += 
+                `
+                    <div id="movie">
+                        <img width="100%" src="${pathImage}${item.poster_path}" alt="poster">
+                        <div>
+                            <a href="#">${item.title}</a>
+                            <p>${item.overview}</p>    
+                        </div>
+                        
+                    </div>
+                
+                `
+            }
+        }
+
+        getMovie()
+
+
+    </script>
+
+</body>
+</html>
